@@ -1,17 +1,23 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: 'print numbers of base 10'
+ * Description: 'print alphaets except q and e'
  * Return: Always 0
  */
 int main(void)
 {
-	int n;
+	int n = 97;
 
-	for (n = 0; n <= 9; n++)
+	while (n <= 122)
 	{
-		printf("%d", n);
+		if (n == 101 || n == 113)
+		{
+			n++;
+			continue;
+		}
+		putchar(n);
+		n++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
