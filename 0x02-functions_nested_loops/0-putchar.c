@@ -1,12 +1,11 @@
-include <stdio.h>
-
+include < stdio.h >
 /**
  * main - Entry point
  * description - 'a program that prints putchar'
  * return: 0
  */
 {
-	printf("_putchar\n")
+	printf("_putchar\n");
 
-	Return: 0
+	Return 0
 }
