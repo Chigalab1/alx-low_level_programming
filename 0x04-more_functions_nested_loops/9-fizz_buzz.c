@@ -1,7 +1,8 @@
+#include "main.h"
 #include <stdio.h>
 /**
  * main - print numbers from 1 to 100
- * Return - Always 0 (success)
+ * Return - void
  */
 int main(void)
 {
@@ -20,10 +21,10 @@ int main(void)
 			printf(" FizzBuzz);
 		else if (i == 1)
 		{
-			printf("%d" , i);
+			printf(" % d" , i);
 		} else
 		{
-			printf(" %d", i);
+			printf(" % d", i);
 		}
 	}
 	printf("\n");
