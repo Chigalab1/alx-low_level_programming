@@ -2,9 +2,9 @@
 #include <math.h>
 
 /**
- * main -  a program that finds and prints the largest prime factor of the number 612852475143,
+ * main -  prints the largest prime factor of the number 612852475143,
  * followed by anew line
- * Retur: Always 0 (success)
+ * Return: Always 0 (success)
  */
 int main(void)
 {
