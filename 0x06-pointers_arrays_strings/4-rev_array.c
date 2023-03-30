@@ -3,7 +3,7 @@
 /**
  * reverse_array - reverses the element of an array
  * @n: function parameter
- * @a function parameter
+ * @a: function parameter
  * Return: 0
  */
 
