@@ -21,10 +21,10 @@ int _atoi(char *s)
 	while (s[length] != '\0')
 		length++;
 
-	while (i < length && f = 0)
+	while (i < length && m == 0)
 	{
 		if (s[i] == '-')
-			++d;
+			++j;
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
