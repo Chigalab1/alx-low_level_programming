@@ -11,7 +11,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i = 0;
+	int i;
 	int j;
 	int k = 0;
 	int t = 0;
@@ -28,8 +28,7 @@ char *argstostr(int ac, char **av)
 		free(p);
 		return (NULL);
 	}
-	while (i < ac)
-		i++;
+	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j]; j++, k++)
 			p[k] = av[i][j];
