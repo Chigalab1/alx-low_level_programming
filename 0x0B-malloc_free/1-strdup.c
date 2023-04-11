@@ -11,22 +11,21 @@
 char *_strdup(char *str)
 {
 	char *s;
-	int i;
-	int j;
+	int i = 0;
 
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; str[i]; i++)
 
-	s = malloc(sizeof(char) * (i + 1));
+	s = malloc(sizeof(char) * i + 1);
 
 	if (s == NULL)
 		return (NULL);
 
-	for (j = 0; str[j]; j++)
+	for (i = 0; str[i]; i++)
 	{
-		s[j] = str[j];
+		s[i] = str[i];
 	}
-	s[j] = str[j];
+	s[i] = str[i];
 	return (s);
 }
