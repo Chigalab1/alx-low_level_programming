@@ -7,24 +7,29 @@
  * @nmemb: number of elements
  * @size: size of bytes
  *
- * Return: NULL
+ * Return: NULL or pointer
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	void *ptr;
+	unsigned int i = 0;
+
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-	size_t total_size = nmemb * size;
 
-	void *ptr = malloc(total_size);
+	ptr = malloc(nmemb * size);
 
-	if (ptr == NULL)
+	if (p == NULL)
 	{
 		return (NULL);
 	}
-
-	memset(ptr, 0, total_size);
+	while (i < (nmemb * size))
+	{
+		*((char *)(ptr) + i) = 0;
+		i++;
+	}
 
 	return (ptr);
 }
