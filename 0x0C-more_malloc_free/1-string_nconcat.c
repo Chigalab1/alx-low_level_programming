@@ -34,7 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	num = n;
 
-	if (s1 == Null)
+	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 == "";
@@ -43,13 +43,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (num >= _strlen(s2))
 		num = _strlen(s2);
 
-	len = _strlen(s1) + num + 1;
+	l = _strlen(s1) + num + 1;
 
-	ptr = malloc(sizeof(*ptr) * len);
-	if (ptr == NULL)
+	p = malloc(sizeof(*p) * l);
+	if (p == NULL)
 		return (NULL);
 
-	while (s1[i] != '\0!)
+	while (s1[i] != '\0')
 	{
 		p[i] = s1[i];
 		i++;
