@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 /**
- * print_opcode - function that prints opcode
+ * main - function that prints opcode
  * @argc: argument count
  * @argv: array of argument
  *
  * Return: 0
  */
-int print_opcode(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 	int b;
@@ -28,7 +28,7 @@ int print_opcode(int argc, char *argv[])
 		exit(2);
 	}
 
-	j = (char *)print_opcode;
+	j = (char *)main;
 
 	i = 0;
 
