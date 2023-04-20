@@ -25,7 +25,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	p = argv[2];
 	num2 = atoi(argv[3]);
 
-	if (get_0p_func(p) == NULL)
+	if (get_op_func(p) == NULL)
 	{
 		printf("Error\n");
 		exit(98);
@@ -46,6 +46,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", get_0p_func(p)(num1, num2));
+	printf("%d\n", get_op_func(p)(num1, num2));
 	return (0);
 }
