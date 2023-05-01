@@ -14,8 +14,11 @@ listint_t *find_listint_loop(listint_t *head)
 	if (!head)
 		return (NULL);
 
-	for (s = head, f = head; s && f && f->next; s = s->next, f = f->next->next)
+	while (s && f && f->next)
 	{
+		s = s->next;
+		f = f->next->next;
+
 		if (f == s)
 		{
 			for (s = head; s != f; s = s->next, f = f->next)
