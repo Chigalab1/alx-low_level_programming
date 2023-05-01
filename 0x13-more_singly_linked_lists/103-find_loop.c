@@ -18,8 +18,7 @@ listint_t *find_listint_loop(listint_t *head)
 	{
 		if (f == s)
 		{
-			s = head;
-			for (; s != f; s = s->next, f = f->next)
+			for (s = head; s != f; s = s->next, f = f->next)
 			{
 				/* emty loop*/
 			}
