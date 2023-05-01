@@ -20,26 +20,30 @@ size_t looped_listint_len(const listint_t *head)
 	chi = head->next;
 	gor = (head->next)->next;
 
-	for (; gor; chi = chi->next, chi = (chi->next)->next)
+	while (gor)
 	{
 		if (chi == gor)
 		{
 			chi = head;
 
-			for (; chi != gor; chi = chi->next, gor = gor->next)
+			while (chi != gor)
 			{
 				nodes++;
+				chi = chi->next;
+				gor = gor->next;
 			}
 
 			chi = gor->next;
 
-			for (; chi != gor; chi = chi->next)
+			for (chi = gor->next; chi != gor; chi = chi->next)
 			{
 				nodes++;
 			}
 
 			return (nodes);
 		}
+		chi = chi->next;
+		gor = (gor->next)->next;
 	}
 	return (0);
 }
