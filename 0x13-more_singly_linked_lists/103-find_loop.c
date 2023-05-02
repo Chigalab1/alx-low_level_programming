@@ -23,7 +23,7 @@ listint_t *find_listint_loop(listint_t *head)
 		{
 			for (s = head; s != f; s = s->next, f = f->next)
 			{
-				/* emty loop*/
+				/* empty loop*/
 			}
 			return (f);
 		}

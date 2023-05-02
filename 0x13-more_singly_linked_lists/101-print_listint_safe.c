@@ -11,7 +11,8 @@ size_t print_listint_safe(const listint_t *head);
  */
 size_t looped_listint_len(const listint_t *head)
 {
-	const listint_t *chi, *gor;
+	const listint_t *chi;
+	const listint_t *gor;
 	size_t nodes = 1;
 
 	if (head == NULL || head->next == NULL)
@@ -32,14 +33,12 @@ size_t looped_listint_len(const listint_t *head)
 				chi = chi->next;
 				gor = gor->next;
 			}
-
 			chi = gor->next;
 
 			for (chi = gor->next; chi != gor; chi = chi->next)
 			{
 				nodes++;
 			}
-
 			return (nodes);
 		}
 		chi = chi->next;
@@ -47,6 +46,7 @@ size_t looped_listint_len(const listint_t *head)
 	}
 	return (0);
 }
+
 
 /**
  * print_listint_safe - function that prints a listint_t linked list
