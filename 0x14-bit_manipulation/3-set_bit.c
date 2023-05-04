@@ -3,7 +3,7 @@
 /**
  * set_bit - function that sets the value of a bit
  * to 1 at a given index
- * @n: pointer to unsigned long int 
+ * @n: pointer to unsigned long int
  * @index: position of bit
  *
  * Return: 1 or -1
