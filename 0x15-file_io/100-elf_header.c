@@ -1,10 +1,4 @@
-#include <elf.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 void elf_check(unsigned char *e_ident);
 void magic_print(unsigned char *e_ident);
@@ -176,7 +170,7 @@ void os_abi_print(unsigned char *e_ident)
  * abi_print - a function that prints the ABI version of an ELF header
  * @el: array containg the ELF version
  */
-void print_abi(unsigned char *e_ident)
+void abi_print(unsigned char *e_ident)
 {
 	printf("  ABI Version:                       %d\n",
 				e_ident[EI_ABIVERSION]);
