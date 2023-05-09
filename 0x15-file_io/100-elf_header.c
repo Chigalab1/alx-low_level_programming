@@ -19,7 +19,7 @@ void elf_close(int elf);
 
 /**
  * elf_check - function that checks if a file is an ELF file
- * @el: array containg ELF numbers
+ * @e_ident: array containg ELF numbers
  *
  */
 void elf_check(unsigned char *e_ident)
@@ -40,7 +40,7 @@ void elf_check(unsigned char *e_ident)
 
 /**
  * magic_print - a function that prints magic numbers of an ELF header
- * @el: array containing the ELF magic numbers
+ * @e_ident: array containing the ELF magic numbers
  */
 void magic_print(unsigned char *e_ident)
 {
@@ -63,7 +63,7 @@ void magic_print(unsigned char *e_ident)
 
 /**
  * class_print - a function that prints the class of an ELF header
- * @el: arry containing the ELF class
+ * @e_ident: arry containing the ELF class
  */
 void class_print(unsigned char *e_ident)
 {
@@ -87,7 +87,7 @@ void class_print(unsigned char *e_ident)
 
 /**
  * data_print - a function that prints the data of an  ELF header
- * @el: array containing the ELF class
+ * @e_ident: array containing the ELF class
  */
 void data_print(unsigned char *e_ident)
 {
@@ -108,7 +108,7 @@ void data_print(unsigned char *e_ident)
 
 /**
  * version_print - a function that prints the version of an ELF header
- * @el: an array containing the ELF version
+ * @e_ident: an array containing the ELF version
  */
 void version_print(unsigned char *e_ident)
 {
@@ -129,8 +129,9 @@ void version_print(unsigned char *e_ident)
 
 /**
  * os_abi_print - a function that prints the OS and ABI of an ELF header
- * @el: pointer to an array containing the version of ELF
- */ 
+ * @e_ident: pointer to an array containing the version of ELF
+ *
+ */
 void os_abi_print(unsigned char *e_ident)
 {
 	printf("  OS/ABI:                            ");
@@ -174,7 +175,7 @@ void os_abi_print(unsigned char *e_ident)
 
 /**
  * abi_print - a function that prints the ABI version of an ELF header
- * @el: array containg the ELF version
+ * @e_ident: array containg the ELF version
  */
 void abi_print(unsigned char *e_ident)
 {
@@ -184,8 +185,8 @@ void abi_print(unsigned char *e_ident)
 
 /**
  * type_print - a function that prints the type of an ELF header
- * @elf_type: ELF type
- * @el: pointer to an array containing ELF class
+ * @e_type: ELF type
+ * @e_ident: pointer to an array containing ELF class
  */
 
 void type_print(unsigned int e_type, unsigned char *e_ident)
@@ -219,8 +220,8 @@ void type_print(unsigned int e_type, unsigned char *e_ident)
 
 /**
  * entry_print -a function that prits point of ELF header
- * @elf_entry: EFL entry point
- * @el: array containg the EFL class
+ * @e_entry: EFL entry point
+ * @e_ident: array containg the EFL class
  */
 
 void entry_print(unsigned long int e_entry, unsigned char *e_ident)
@@ -241,8 +242,10 @@ void entry_print(unsigned long int e_entry, unsigned char *e_ident)
 }
 
 /**
- * elf_close function that closes an EFL file
+ * elf_close - function that closes an EFL file
  * @elf: file descriptor
+ *
+ * Description: exit if the file cannot be closed
  */
 
 void elf_close(int elf)
@@ -260,6 +263,8 @@ void elf_close(int elf)
  * ELF header at the start of an ELF file
  * @argc: argument count
  * @argv: argument vector
+ *
+ * Description: exit the function if the file is not an EFL file
  *
  * Return: 0
  */
