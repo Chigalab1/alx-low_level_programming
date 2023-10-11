@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * Bin_search - searches for a value in an array of
+ * rec_search - searches for a value in an array of
  * integers using the Binary search algorithm
  *
  *
@@ -10,7 +10,7 @@
  * @value: value to search in
  * Return: index of the number
  */
-int Bin_search(int *array, size_t size, int value)
+int rec_search(int *array, size_t size, int value)
 {
 	size_t half = size / 2;
 	size_t i;
@@ -43,11 +43,11 @@ int Bin_search(int *array, size_t size, int value)
 }
 
 /**
- * advanced_binary -Func that  calls Bin_search to return
+ * advanced_binary - calls to rec_search to return
  * the index of the number
  *
  * @array: input array
- * @size: number of elelments in the array
+ * @size: size of the array
  * @value: value to search in
  * Return: index of the number
  */
@@ -55,7 +55,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	int index;
 
-	index = Bin_search(array, size, value);
+	index = rec_search(array, size, value);
 
 	if (index >= 0 && array[index] != value)
 		return (-1);
